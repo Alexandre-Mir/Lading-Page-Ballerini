@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+:root{
+  --righteous: 'Righteous', cursive;
+  --sarala: 'Sarala', sans-serif;
+}
+
+body{
+  background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+.cabecalho {
+  align-items: center;
+  display: flex ;
+  justify-content:space-around;
+  padding: 1rem 0;
+  height: cacl(15vh - 1rem);
+}
+
+.cabecalho__imagem{
+  height: 4rem;
+  transition: 0.2s;
+}
+
+.cabecalho__imagem:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px #fff2e714;
+  border-radius: 100%;
+}
+
+.cabecalho__nav{
+  display: flex;
+  font-family: var(--sarala);
+  font-size: 1.2rem;
+  font-weight: 400;
+  gap: 2rem;
+}
+
+.cabecalho__nav--item {
+  color: #FFF2E7;
+  position: relative;
+}
+
+.cabecalho__nav--item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #FFF2E7;
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.cabecalho__nav--item:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.conteudo{
+  border-top: 0.4px solid #FFF2E7;
+  /* margin: 0 0 4rem; */
+}
+
+.conteudo__principal{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  height: 85vh;
+}
+
+.conteudo__principal--texto{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.conteudo__principal--texto--titulo{
+  color: #FFF2E7;
+  font-family: var(--righteous);
+  font-size: 4rem;
+}
+
+.conteudo__principal--texto--subtitulo{
+  color: #ECD6C4;
+  font-family: var(--sarala);
+  font-size: 1.3rem;
+}
+
+.conteudo__principal--texto--botao{
+  background-color: #ECD6C4;
+  color: #2F2325;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 1.3rem ;
+  box-shadow: 4px 5px 4px 0px #00000040;
+  font-family: var(--sarala);
+  font-size: 1.3rem;
+  transition: 0.3s;
+  
+}
+
+.conteudo__principal--texto--botao:hover{
+  background-color: #2F2325;
+  color: #ECD6C4;
+  cursor: pointer;
+}
+
+.conteudo__principal--texto--botao:active{
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #00000040;
+  transition: ease-out;
+}
+
+.conteudo__principal--imagem{
+  background: url('/assets/img/Ballebot.svg') center/contain no-repeat;
+  height: 100%;
+  width: 27rem;
+}
+
+.conteudo__secundario{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 4rem ;
+}
+
+.conteudo__secundario--titulo{
+  border-top: .4px solid #FFF2E7;
+  padding: 4rem 0 4rem ;
+  font-family: var(--righteous);
+  font-size: 1.5rem;
+  color: #FFF2E7;
+}
+
+.conteudo__secundario--lista{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1.5rem;
+ color: #ECD6C4;
+ font-family: var(--sarala);
+ font-size: 1rem;
+}
+
+.rodape{
+  border-top: .4px solid #FFF2E7;
+  padding: 2rem;
+}
+
+.rodape__imagem{
+  display: block;
+  height: 3rem;
+  margin: 0 auto;
+}
